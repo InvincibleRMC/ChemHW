@@ -4,8 +4,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class ChemHW {
-
-    static String[][] periodicTable = new String[23][2];
+    static String[][] periodicTable = new String[36][2];
 
     public static void main(final String[] args) {
 
@@ -55,6 +54,33 @@ public class ChemHW {
         periodicTable[21][1] = "47.867";
         periodicTable[22][0] = "v";
         periodicTable[22][1] = "50.9415";
+        periodicTable[23][0] = "cr";
+        periodicTable[23][1] = "51.9961";
+        periodicTable[24][0] = "mn";
+        periodicTable[24][1] = "54.938049";
+        periodicTable[25][0] = "fe";
+        periodicTable[25][1] = "55.845";
+        periodicTable[26][0] = "co";
+        periodicTable[26][1] = "58.933200 ";
+        periodicTable[27][0] = "ni";
+        periodicTable[27][1] = "58.6934";
+        periodicTable[28][0] = "cu";
+        periodicTable[28][1] = "63.546";
+        periodicTable[29][0] = "zn";
+        periodicTable[29][1] = "65.409";
+        periodicTable[30][0] = "ga";
+        periodicTable[30][1] = "69.723";
+        periodicTable[31][0] = "ge";
+        periodicTable[31][1] = "72.64";
+        periodicTable[32][0] = "as";
+        periodicTable[32][1] = "74.92160";
+        periodicTable[33][0] = "se";
+        periodicTable[33][1] = "78.96";
+        periodicTable[34][0] = "br";
+        periodicTable[34][1] = "79.904";
+        periodicTable[35][0] = "kr";
+        periodicTable[35][1] = "83.798";
+
         StrinArrayComparator cmp = new StrinArrayComparator();
 
         Arrays.sort(periodicTable, cmp);
@@ -62,7 +88,9 @@ public class ChemHW {
         final Scanner scanner = new Scanner(System.in);
 
         // System.out.println(tryParseDouble("yikes"));
-
+        System.out.println("FYI letters need to be lowercase.");
+        System.out.println("FYI C->K is ke not k.");
+        System.out.println("FYI avogadro's # is a.");
         while (true) {
 
             String equation = getEquation(scanner);
@@ -76,10 +104,16 @@ public class ChemHW {
     public static String getEquation(Scanner scanner) {
 
         String str = scanner.nextLine();
-
+    String ke ="273.15";
+    // System.out.println(str);
+       str = str.replace("ke",ke);
+       
         for (int i = 0; i < periodicTable.length - 1; i++) {
             str = str.replace(periodicTable[i][0], periodicTable[i][1]);
         }
+        String a = "6.022*10^23";
+        str = str.replace("a",a);
+        // System.out.println(str);
 
         return str;
     }
