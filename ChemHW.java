@@ -113,6 +113,9 @@ public class ChemHW {
         }
         String a = "6.022*10^23";
         str = str.replace("a",a);
+
+        String r = "8.314462618";
+        str = str.replace("r",r);
         // System.out.println(str);
 
         return str;
