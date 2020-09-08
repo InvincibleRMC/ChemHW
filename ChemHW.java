@@ -21,7 +21,7 @@ public class ChemHW {
         periodicTable[5][0] = "c";
         periodicTable[5][1] = "12.0107";
         periodicTable[6][0] = "n";
-        periodicTable[6][1] = "	14.0067";
+        periodicTable[6][1] = "14.0067";
         periodicTable[7][0] = "o";
         periodicTable[7][1] = "15.9994";
         periodicTable[8][0] = "f";
