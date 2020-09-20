@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class ChemHW {
     static String[][] periodicTable = new String[36][2];
 
+    public static double ans;
+
     public static void main(final String[] args) {
 
         periodicTable[0][0] = "h";
@@ -96,14 +98,18 @@ public class ChemHW {
             String equation = getEquation(scanner);
 
             // System.out.println(equation);
-            System.out.println(eval(equation));
+            ans = (eval(equation));
+            System.out.println(ans);
 
         }
     }
 
     public static String getEquation(Scanner scanner) {
 
+
         String str = scanner.nextLine();
+
+        str = str.replace("ans", Double.toString(ans));
     String ke ="273.15";
     // System.out.println(str);
        str = str.replace("ke",ke);
