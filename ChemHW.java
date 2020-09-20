@@ -97,7 +97,7 @@ public class ChemHW {
 
             String equation = getEquation(scanner);
 
-            // System.out.println(equation);
+             System.out.println(equation);
             ans = (eval(equation));
             System.out.println(ans);
 
@@ -123,6 +123,9 @@ public class ChemHW {
         String r = "0.0821";
         str = str.replace("r",r);
         // System.out.println(str);
+
+        String E ="*10^";
+        str = str.replace("E", E);
 
         return str;
     }
