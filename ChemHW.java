@@ -117,7 +117,7 @@ public class ChemHW {
         for (int i = 0; i < periodicTable.length - 1; i++) {
             str = str.replace(periodicTable[i][0], periodicTable[i][1]);
         }
-        String a = "6.022*10^23";
+        String a = "(6.022*10^23)";
         str = str.replace("a",a);
 
         String r = "0.0821";
